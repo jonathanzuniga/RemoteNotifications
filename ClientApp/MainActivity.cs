@@ -13,24 +13,49 @@ namespace ClientApp
 	[Activity (Label = "Remote Notifications", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+		TextView msgText;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
+			// Set our view from the "main" layout resource.
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			msgText = FindViewById<TextView> (Resource.Id.msgText);
+
+			// Check for Google Play Services on the device:
+			IsPlayServicesAvailable ();
+//			if (IsPlayServicesAvailable ()) {
+//				// Start the registration intent service; try to get a token:
+//				var intent = new Intent (this, typeof (RegistrationIntentService));
+//
+//				StartService (intent);
+//			}
+		}
+
+		// Utility method to check for the presence of the Google Play Services APK:
+		public bool IsPlayServicesAvailable ()
+		{
+			// These methods are moving to GoogleApiAvailability soon:
+			int resultCode = GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
+
+			if (resultCode != ConnectionResult.Success) { 
+				// Google Play Service check failed - display the error to the user:
+				if (GooglePlayServicesUtil.IsUserRecoverableError (resultCode)) {
+					// Give the user a chance to download the APK:
+					msgText.Text = GooglePlayServicesUtil.GetErrorString (resultCode);
+				} else {
+					msgText.Text = "Sorry, this device is not supported";
+					Finish ();
+				}
+
+				return false;
+			} else {
+				msgText.Text = "Google Play Services is available.";
+
+				return true;
+			}
 		}
 	}
 }
-
-
