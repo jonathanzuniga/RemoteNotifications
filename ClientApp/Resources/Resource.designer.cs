@@ -181,7 +181,7 @@ namespace ClientApp
 			public const int common_signin_btn_text_pressed_light = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int ic_add_box_black_24dp = 2130837530;
+			public const int ic_add_box_white_24dp = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
 			public const int Icon = 2130837531;

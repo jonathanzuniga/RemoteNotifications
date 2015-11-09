@@ -29,7 +29,7 @@ namespace ClientApp
 
 			var pendingIntent = PendingIntent.GetActivity (this, 0, intent, PendingIntentFlags.OneShot);
 			var notificationBuilder = new Notification.Builder (this)
-				.SetSmallIcon (Resource.Drawable.ic_add_box_black_24dp)
+				.SetSmallIcon (Resource.Drawable.ic_add_box_white_24dp)
 				.SetContentTitle ("GCM Message")
 				.SetContentText (message)
 				.SetAutoCancel (true)

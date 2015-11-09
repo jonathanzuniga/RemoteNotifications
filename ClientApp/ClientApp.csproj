@@ -79,11 +79,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_add_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_add_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_add_box_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_box_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_box_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_box_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_box_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
