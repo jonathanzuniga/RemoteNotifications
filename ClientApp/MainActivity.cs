@@ -25,13 +25,13 @@ namespace ClientApp
 			msgText = FindViewById<TextView> (Resource.Id.msgText);
 
 			// Check for Google Play Services on the device:
-			IsPlayServicesAvailable ();
-//			if (IsPlayServicesAvailable ()) {
-//				// Start the registration intent service; try to get a token:
-//				var intent = new Intent (this, typeof (RegistrationIntentService));
-//
-//				StartService (intent);
-//			}
+//			IsPlayServicesAvailable ();
+			if (IsPlayServicesAvailable ()) {
+				// Start the registration intent service; try to get a token:
+				var intent = new Intent (this, typeof (RegistrationIntentService));
+
+				StartService (intent);
+			}
 		}
 
 		// Utility method to check for the presence of the Google Play Services APK:
