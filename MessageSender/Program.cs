@@ -36,11 +36,11 @@ namespace MessageSender
 
 					Task.WaitAll(client.PostAsync(url,
 						new StringContent(jGcmData.ToString(), Encoding.Default, "application/json"))
-						.ContinueWith(response =>
-							{
-								Console.WriteLine(response);
-								Console.WriteLine("Message sent: check the client device notification tray.");
-							}));
+						.ContinueWith(response => {
+							Console.WriteLine(response);
+							Console.WriteLine("Message sent: check the client device notification tray.");
+						})
+					);
 				}
 			} catch (Exception e) {
 				Console.WriteLine("Unable to send GCM message:");

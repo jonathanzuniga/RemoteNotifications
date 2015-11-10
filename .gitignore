@@ -39,4 +39,5 @@ Thumbs.db
 #dotCover
 *.dotCover
 
-Keys.cs
+ClientApp/Keys.cs
+MessageSender/Keys.cs

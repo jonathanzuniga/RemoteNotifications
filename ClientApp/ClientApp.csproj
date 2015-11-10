@@ -64,6 +64,7 @@
     <Compile Include="InstanceIdListenerService.cs" />
     <Compile Include="RegistrationIntentService.cs" />
     <Compile Include="Keys.cs" />
+    <Compile Include="Keys_sample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
