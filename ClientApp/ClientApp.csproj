@@ -63,7 +63,7 @@
     <Compile Include="GcmListenerService.cs" />
     <Compile Include="InstanceIdListenerService.cs" />
     <Compile Include="RegistrationIntentService.cs" />
-    <Compile Include="Keys_sample.cs" />
+    <Compile Include="Keys.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
